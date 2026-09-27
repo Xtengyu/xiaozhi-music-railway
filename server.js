@@ -197,6 +197,11 @@ async function handleMessage(data) {
 
   try {
     switch (method) {
+      case 'ping':
+       return {
+          jsonrpc: '2.0', id,
+          result: {}
+          };
       case 'initialize':
         return {
           jsonrpc: '2.0', id,
